@@ -2,6 +2,7 @@
 const display = document.getElementById('display');
 
 function appendToDisplay(value) {
+    
     display.value += value;
 }
 
@@ -10,6 +11,7 @@ function clearDisplay() {
 }
 
 function calculate() {
+    if(display?.value === "") return
     try {
         display.value = eval(display.value);
     }
